@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Unspalsh</title>
+    <link rel="stylesheet" href="logIn.css">
+</head>
+<body>
+    <div id="head">
+        <img src="https://unsplash.com/assets/core/logo-black-df2168ed0c378fa5506b1816e75eb379d06cfcd0af01e07a2eb813ae9b5d7405.svg" alt="">
+        <h1>Login</h1>
+        <p>Welcome back.</p>
+        <button><span><img src="data:image/jpeg;base64,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" alt=""></span> Login with Facebook</button>
+    </div>
+
+    <div id="mid">
+        <p>OR</p>
+    </div>
+
+    <div id="form">
+
+        <form action="">
+
+            <label for="">Email</label><br>
+            <input type="text" name="" id="eMail"><br>
+            <div id="pass">
+                <label for="">Password</label><br>
+                <label id="forget" for="">Forgot your password?</label><br>
+
+            </div>
+            <input type="password" id="password" ><br>
+            <input type="submit" name="" id="" value="Login">
+
+        </form>
+
+        <div id="footer">
+            <p>Don't have an account? <a href="signUp.html">Join Unspalsh</a></p>
+        </div>
+    </div>
+
+    
+</body>
+</html>
+
+
+<script>
+
+    let form = document.querySelector("form")
+    let userData = JSON.parse(localStorage.getItem("localUserDatass")) || []
+
+    form.addEventListener("submit", function(){
+        event.preventDefault()
+
+        let data = {
+            Email : form.eMail.value,
+            Password : form.password.value,
+        }
+
+        if(checkLogIn(data.Email, data.Password) === true){
+            window.location.href = "index.html"
+            localStorage.setItem("signIn", JSON.stringify(data))
+            // alert("jhgj")
+        }
+
+        else{
+            alert("Invalid username or password.")
+            window.location.reload()
+        }
+
+
+    })
+
+    function checkLogIn(Email, Password){
+        let filtered = userData.filter(function(ele){
+            return ele.Email === Email && ele.passWord === Password
+            
+        })
+
+        if(filtered.length > 0){
+            return true
+        }
+        else{
+            return false
+        }
+    }
+
+</script>

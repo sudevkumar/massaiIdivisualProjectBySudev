@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signUp.css">
+</head>
+<body>
+    
+    <div id="main">
+        <div id="left-side">
+            <div>
+                <img src="https://unsplash.com/assets/core/logo-white-8962708214629a3e8f9fbf5b87b70c3ace41c4175cbcc267f7fbb8449ac45bdd.svg" alt="">
+                <h1>Creation  Starts here</h1>
+                <p>Access 3,964,001 free, high-resolution <br><span>photos you can’t find anywhere else</span> </p>
+                <p>Uploaded 1 day ago by Tetiana Shadrina</p>
+            </div>
+        </div>
+
+
+        <div id="right-side">
+
+            <h1>Join Unsplash</h1>
+
+            <p>Already have an account? <a href="logIn.html">Login</a></p>
+            <button><span><img src="https://icon2.cleanpng.com/20180328/bve/kisspng-facebook-computer-icons-logo-facebook-icon-5abb9662a70fb9.2984412615222431706843.jpg" alt=""></span> Login with Facebook</button>
+
+            <p id="mid">OR</p>
+
+            <div id="form">
+
+                <form action="">
+                    <div id="labels">
+                        <label for="" id="fName">First Name</label>
+                        <label for="" id="lName">Last Name</label>
+                    </div>
+    
+                    <div id="inps">
+                        <input type="text" name="" id="fNameI">
+                        <input type="text" name="" id="lNameI">
+                    </div>
+    
+                    <div id="eMail">
+                        <label  for="" id="eeMail">Email</label><br>
+                        <input  type="text" name="" id="eMails">
+                    </div>
+    
+                    <div id="uName">
+                        <label for="" id="uN">Username <span>(only letters, numbers, and underscores)</span></label><br>
+                        <input type="text" name="" id="uNames">
+                    </div>
+    
+                    <div id="Password">
+                        <label for="" id="pass">Password <span>(min. 8 char)</span></label><br>
+                        <input type="password" name="" id="Passwords">
+                    </div>
+    
+                    <div id="btn">
+                        <input type="submit" name="" id="" value="Join">
+                    </div>
+    
+                    <div id="term">
+                        <p>By joining, you agree to the <a href="">Terms</a> and <a href="">Privacy Policy</a>.</p>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+<script>
+
+    let form = document.querySelector("form")
+    let userData = JSON.parse(localStorage.getItem("localUserDatass")) || []
+
+    form.addEventListener("submit", function(){
+        event.preventDefault()
+
+        let data = {
+            Firstname : form.fNameI.value,
+            SecondName : form.lNameI.value,
+            Email : form.eMails.value,
+            userName : form.uNames.value,
+            passWord : form.Passwords.value,
+        }
+
+        // console.log(data.passWord.length )
+    
+
+        
+        if(data.Firstname == [] && data.Email == [] && data.userName == [] && data.passWord == []){
+            var lable1 = document.querySelector("#fName")
+            lable1.style.color = "red"
+            var input1 = document.querySelector("#fNameI")
+            input1.style.border = "1px solid red"
+            // parentNode.removeChild(parentNode)
+            // parent.remove()
+            window.location.reload()
+        }
+
+        else{
+            if(data.Firstname == []){
+                var lable1 = document.querySelector("#fName")
+                lable1.style.color = "red"
+                var input2 = document.querySelector("#lNameI")
+                input1.style.border = "1px solid red"
+                // parentNode.removeChild(parentNode)
+                parent.remove()
+                window.location.reload()
+            }
+
+            if(data.SecondName == []){
+                var lable1 = document.querySelector("#lName")
+                lable1.style.color = "red"
+                var input1 = document.querySelector("#lNameI")
+                input1.style.border = "1px solid red"
+                // parentNode.removeChild(parentNode)
+                // parent.remove()
+                window.location.reload()
+            }
+
+            if(data.Email == []){
+                var lable1 = document.querySelector("#eeMail")
+                lable1.style.color = "red"
+                var input1 = document.querySelector("#eMails")
+                input1.style.border = "1px solid red"
+                // parentNode.removeChild(parentNode)
+                parent.remove()
+                window.location.reload()
+            }
+
+            if(data.userName == []){
+                var lable1 = document.querySelector("#uN")
+                lable1.style.color = "red"
+                var input1 = document.querySelector("#uNames")
+                input1.style.border = "1px solid red"
+                // parentNode.removeChild(parentNode)
+                parent.remove()
+                window.location.reload()
+            }
+
+            if(data.passWord == []){
+                var lable1 = document.querySelector("#pass")
+                lable1.style.color = "red"
+                var input1 = document.querySelector("#Passwords")
+                input1.style.border = "1px solid red"
+                // parentNode.removeChild(parentNode)
+                parent.remove()
+                window.location.reload()
+            }
+
+            if(data.passWord.length < 8){
+                var lable1 = document.querySelector("#pass")
+                lable1.style.color = "red"
+                var input1 = document.querySelector("#Passwords")
+                input1.style.border = "1px solid red"
+                alert("Password must be more that 8 letters")
+                // parentNode.removeChild(parentNode)
+                // alert("Password must be more that 8 letters")
+                parent.remove()
+                window.location.reload()
+            }
+        }
+
+        if((checkEmail(data.Email) === false && checkUsername(data.userName) === false) &&
+         (checkEmail(data.Email) === true || checkUsername(data.userName) === false) &&
+          (checkEmail(data.Email) === false || checkUsername(data.userName) === true)){
+            alert("Already have an account exsit.")
+            window.location.href ="logIn.html"
+            // parentNode.removeChild(parentNode)
+            parent.remove()
+            // window.location.reload()
+        }
+
+        else{
+            if(checkEmail(data.Email) === true && (checkUsername(data.userName) === true)){
+                userData.push(data)
+                localStorage.setItem("localUserDatass", JSON.stringify(userData))
+                window.location.reload()
+                
+            }
+        }
+
+    })
+
+    function checkUsername(userName){
+        let filterdByUn = userData.filter(function(ele){
+            return userName === ele.userName
+        })
+
+        if(filterdByUn.length > 0){
+            return false
+        }
+        else{
+            return true
+        }
+    }
+
+
+    function checkEmail(Email){
+        let filterdByEm = userData.filter(function(ele){
+            return Email === ele.Email
+        })
+
+        if(filterdByEm.length > 0){
+            return false
+        } 
+        else{
+            return true
+        }
+    }
+
+
+    
+</script>

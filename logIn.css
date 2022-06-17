@@ -1,0 +1,152 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#head{
+    height: auto;
+    width: 40%;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 60px;
+}
+
+#head > img:nth-child(1){
+    display: block;
+    margin: auto;
+    height: 70px;
+}
+
+#head > h1{
+    font-size: 33px;
+    margin-top: 25px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#head > p{
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+}
+
+#head > button{
+    margin: auto;
+    height: 40px;
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    background-color: 
+    #1878f2;
+    color: white;
+    border: none;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#head > button > span > img{
+    height: 20px;
+    margin-top: 2px;
+    margin-right: 10px;
+    border-radius: 55%;
+    /* margin-bottom: 10px; */
+}
+
+#mid {
+     margin-top: 40px;
+     margin-bottom: 40px;
+}
+
+#mid > p{
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#form{
+    height: auto;
+    width: 40%;
+    /* border: 1px solid blue; */
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+#form > form > label{
+    /* width: 100%; */
+    margin-top: 10px;
+    /* margin: auto; */
+    margin-left: 20px;
+    
+    
+}
+
+#pass > label{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#form > form > input{
+    /* padding-top: 10px; */
+    margin-top: 9px;
+    width: 90%;
+    height: 40px;
+    margin-left: 20px;
+
+}
+
+#form > form > div {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#form > form > div > #forget{
+    display: block;
+    margin-right: -85px;
+    color: gray;
+    text-decoration: underline;
+}
+
+
+
+#form > form > input:last-child{
+    width: 91%;
+    margin-top: 19px;
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    height: 46px;
+    border: none;
+    margin-bottom: 50px;
+
+}
+
+
+#form > #footer{
+    display: flex;
+    /* margin: auto; */
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 91%;
+    margin: auto;
+    border: 1px solid gray;
+    /* margin-left: -0.1px; */
+}
+
+
+#form > #footer > p > a {
+    color: gray;
+}
+
+
+
+
+
