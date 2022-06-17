@@ -183,7 +183,7 @@
             if(checkEmail(data.Email) === true && (checkUsername(data.userName) === true)){
                 userData.push(data)
                 localStorage.setItem("localUserDatass", JSON.stringify(userData))
-                window.location.reload()
+                window.location.href = "index.html"
                 
             }
         }
